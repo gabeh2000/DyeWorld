@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class charScript : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class charScript : MonoBehaviour
     public float JumpForce = 5;
     bool facingleft = true;
     public int vida  = 3;
+    public const int INTERFACE_SCENE = 0;
 
     private Rigidbody2D _rigidbody;
     // Start is called before the first frame update
@@ -38,8 +40,10 @@ public class charScript : MonoBehaviour
             Die();
         }
     }
+
     void Die(){
         Destroy(gameObject);
+        SceneManager.LoadScene(INTERFACE_SCENE);
     }
 
     void Flip(){
