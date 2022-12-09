@@ -24,10 +24,13 @@ public class tiroFisica : MonoBehaviour
     void OnTriggerEnter2D(Collider2D hitInfo) {
         //Debug.Log(hitInfo.name);
         Enemy enemy = hitInfo.GetComponent<Enemy>();
+        Wall wall = hitInfo.GetComponent<Wall>();
         if(enemy !=null){
             if(enemy.tipo_inimigo == tipo_tiro){
                 enemy.TakeDamage(dano);
             }
+            Destroy(gameObject);
+        }else if(wall!=null){
             Destroy(gameObject);
         }
         
