@@ -26,10 +26,10 @@ public class tiroFisica : MonoBehaviour
         Enemy enemy = hitInfo.GetComponent<Enemy>();
         Wall wall = hitInfo.GetComponent<Wall>();
         if(enemy !=null){
-            if(enemy.tipo_inimigo == tipo_tiro){
-                enemy.TakeDamage(dano);
-            }
+        
+            enemy.TakeDamage(dano, tipo_tiro);
             Destroy(gameObject);
+        
         }else if(wall!=null){
             Destroy(gameObject);
         }
