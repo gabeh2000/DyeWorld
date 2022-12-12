@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public float MovementSpeed = 1;
     public Transform targetPlayer;
     public int dano = 1;
+    EnemySpawner enemySpawner;
 
     private void Start()
     {
@@ -18,22 +19,25 @@ public class Enemy : MonoBehaviour
 
     private void Update() 
     {
-        transform.position = Vector2.MoveTowards(transform.position,targetPlayer.position,MovementSpeed*Time.deltaTime);
+        if(targetPlayer != null){
+            transform.position = Vector2.MoveTowards(transform.position,targetPlayer.position,MovementSpeed*Time.deltaTime);
+        }
     }
 
-//    public virtual void TakeDamage(int damage, int damageType);
    public virtual void TakeDamage(int damage, int damageType)
     {
-        if(damageType==tipo_inimigo){
+        if(damageType == tipo_inimigo){
             vida -= damage;
-        }
-        if(vida<=0){
-            Die();
+            if(vida<=0){
+                Die();
+            }
         }
     }
 
     protected void Die()
     {
+        enemySpawner = GameObject.FindGameObjectWithTag("EnemySpawn").GetComponent<EnemySpawner>();
+        enemySpawner.DestroyEnemy(gameObject);
         Destroy(gameObject);
     }  
     

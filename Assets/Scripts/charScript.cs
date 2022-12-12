@@ -11,13 +11,11 @@ public class charScript : MonoBehaviour
     public const int INTERFACE_SCENE = 0;
 
     private Rigidbody2D _rigidbody;
-    // Start is called before the first frame update
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         var movement = Input.GetAxis("Horizontal");
@@ -52,15 +50,10 @@ public class charScript : MonoBehaviour
         gameObject.transform.localScale = currentScale;
         facingleft = !facingleft; 
     }
+
     void OnCollisionEnter2D(Collision2D hitInfo) {
-        //Debug.Log(hitInfo.name);
-        //charScript player = hitInfo.GetComponent<charScript>();
         if(hitInfo.gameObject.tag == "Inimigo"){
-            
             TakeDamage(1);
-            
         }
-        
-        
     }
 }

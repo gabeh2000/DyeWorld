@@ -13,18 +13,8 @@ public class EnemyTipo1 : Enemy
 
     private void Update() 
     {
-        transform.position = Vector2.MoveTowards(transform.position,targetPlayer.position,MovementSpeed*Time.deltaTime);
+        if(targetPlayer != null){
+            transform.position = Vector2.MoveTowards(transform.position,targetPlayer.position,MovementSpeed*Time.deltaTime);
+        }
     }
-
-    // public void TakeDamage(int damage, int damageType)
-    // {
-    //     if(damageType==tipo_inimigo){
-    //         vida -= damage;
-    //     }
-    //     if(vida<=0){
-    //         Die();
-    //     }
-    // }
-
-  
 }

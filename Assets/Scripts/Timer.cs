@@ -9,7 +9,7 @@ public class Timer : MonoBehaviour
 {
 
     private const double INITIAL_TIME = 30.0;
-    private double currentTime;
+    public double currentTime;
     public TMP_Text currentTimeText;
     public const int INTERFACE_SCENE = 0;
     public Transform targetCharacter;
