@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     private int dificultScale;
     public List<GameObject> enemies = new List<GameObject>();
 
-    private const double INITIAL_TIME = 30.0;
+    private const double INITIAL_TIME = 60.0;
     public TMP_Text currentTimeText;
 
     public GameObject enemyRedColor;
