@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
 
-    private const double INITIAL_TIME = 30.0;
+    private const double INITIAL_TIME = 60.0;
     public double currentTime;
     public TMP_Text currentTimeText;
     public const int INTERFACE_SCENE = 0;
