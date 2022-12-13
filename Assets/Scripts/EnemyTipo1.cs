@@ -14,7 +14,7 @@ public class EnemyTipo1 : Enemy
     private void Update() 
     {
         if(targetPlayer != null){
-            transform.position = Vector2.MoveTowards(transform.position,targetPlayer.position,MovementSpeed*Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, targetPlayer.position, MovementSpeed * Time.deltaTime);
         }
     }
 }
