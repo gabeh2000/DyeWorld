@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6bb81e3321af06d429b844e1d61cabec
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - The Cat FREE
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 06617847c41779a44b65f5abeaaf5956, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
